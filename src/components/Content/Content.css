@@ -1,0 +1,95 @@
+.content {
+  display: grid;
+  place-content: center;
+  gap: 2rem;
+  width: 75%;
+  color: var(--clr-primary);
+}
+
+.content h1 {
+  font-size: 4rem;
+  font-weight: var(--fw-light);
+  text-transform: uppercase;
+  line-height: 1;
+  letter-spacing: 1rem;
+}
+
+.content h1 span {
+  color: var(--clr-span-text);
+  font-weight: var(--fw-regular);
+}
+
+.content form {
+  --padding: 1.8rem;
+  --rounded: 2rem;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0.5rem;
+}
+
+.content form div {
+  display: grid;
+  grid-template-columns: 1fr auto auto auto;
+  grid-template-rows: subgrid;
+}
+
+.content form div input {
+  padding-inline: var(--padding) calc(var(--padding) * 3.2);
+  border: 2px solid var(--clr-primary);
+  border-radius: var(--rounded);
+  grid-column: 1/4;
+}
+
+.content form input::placeholder {
+  color: var(--clr-primary);
+}
+
+.content form input:focus,
+.content form input:focus-visible {
+  border: 2px solid var(--clr-outline);
+  outline: none;
+}
+
+.submit-btn {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-column: 2/5;
+}
+
+.error-icon {
+  margin-right: 1rem;
+  display: grid;
+  place-items: center;
+}
+
+button {
+  cursor: pointer;
+  background: var(--clr-btn);
+  border: none;
+  padding: 1rem 2.5rem;
+  border-radius: var(--rounded);
+}
+
+button:hover {
+  background: var(--clr-btn-active);
+  box-shadow: 0 12px 20px 0 #ccc;
+}
+
+label {
+  padding: 0 var(--padding);
+  color: var(--clr-outline);
+}
+
+@media (max-width: 768px) {
+  .content {
+    margin-top: 4rem;
+    width: 80%;
+  }
+
+  .content h1 {
+    font-size: 3rem;
+  }
+}
