@@ -40,6 +40,7 @@
   border: 2px solid var(--clr-primary);
   border-radius: var(--rounded);
   grid-column: 1/4;
+  background: var(--clr-xxx);
 }
 
 .content form input::placeholder {
